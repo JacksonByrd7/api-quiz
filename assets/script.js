@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "which is the largest animal in the world?",
+    question: "Which is the largest animal in the world?",
     answers: [
        {text: "Bear", correct: false},
        {text: "Zebra", correct: false},
@@ -9,39 +9,39 @@ const questions = [
     ]
   },
   {
-    question: "which is the largest animal in the world?",
+    question: "What color is Mario's hat?",
     answers: [
-       {text: "Bear", correct: false},
-       {text: "Zebra", correct: false},
-       {text: "Blue Whale", correct: true},
-       {text: "Cow", correct: false},
+       {text: "Red", correct: true},
+       {text: "green", correct: false},
+       {text: "Blue", correct: false},
+       {text: "Yellow", correct: false},
     ]
   },
   {
-    question: "which is the largest animal in the world?",
+    question: "What is a common Thanksgiving food?",
     answers: [
-       {text: "Bear", correct: false},
-       {text: "Zebra", correct: false},
-       {text: "Blue Whale", correct: true},
-       {text: "Cow", correct: false},
+       {text: "Steak", correct: false},
+       {text: "Turkey", correct: true},
+       {text: "Venison", correct: false},
+       {text: "Octopus", correct: false},
     ]
   },
   {
-    question: "which is the largest animal in the world?",
+    question: "How many directions are depicted on a map?",
     answers: [
-       {text: "Bear", correct: false},
-       {text: "Zebra", correct: false},
-       {text: "Blue Whale", correct: true},
-       {text: "Cow", correct: false},
+       {text: "One", correct: false},
+       {text: "Two", correct: false},
+       {text: "Three", correct: false},
+       {text: "Four", correct: true},
     ]
   },
   {
-    question: "which is the largest animal in the world?",
+    question: "which drink is best for hydration?",
     answers: [
-       {text: "Bear", correct: false},
-       {text: "Zebra", correct: false},
-       {text: "Blue Whale", correct: true},
-       {text: "Cow", correct: false},
+       {text: "Water", correct: true},
+       {text: "Tea", correct: false},
+       {text: "Beer", correct: false},
+       {text: "Soda", correct: false},
     ]
   },
 ];
@@ -106,7 +106,7 @@ function showScore (){
   resetState();
   questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
   nextButton.innerHTML = "play Again";
-  nextButton.style.display= "block";
+  nextButton.style.display= "block"
 }
 
 function handleNextButton(){
@@ -118,13 +118,12 @@ function handleNextButton(){
   }
 }
 
-nextButton.addEventListener("click", ()=>){
+nextButton.addEventListener("click", ()=> {
   if(currentQuestionIndex < questions.length){
     handleNextButton();
   }else{
     startQuiz();
   }
-  }
-};
+});
 
 startQuiz();
